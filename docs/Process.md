@@ -3,10 +3,10 @@
 ## Process
 
 ### Phase 1
-1. **Sign Up**
-   - Complete the [Agency 1 Signup Form](https://forms.office.com/e/QRE4GchecV) and provide your GitHub username and role preference.
-2. **Orientation**
+1. **Orientation**
    - Attend the Agency 1 Introduction and Orientation calls, or watch the recordings, for an overview of expectations.
+2. **Sign Up**
+   - Complete the Agency 1 Signup Form and provide your GitHub username and role preference.
 3. **Team Assignment**
    - You'll be assigned to a team based on your preferences. Teams aim to balance skills, so you might be placed in your 2nd or 3rd choice.
 4. **Team Cohesion**
@@ -52,26 +52,6 @@ Your contribution is assessed based on your written reflection and role responsi
 - A link to the project board filtered by your GitHub username.
 - Evidence of involvement in discussions (e.g., Discord, Teams).
 - A reflection (~500-1000 words) on your process.
-
-## Marking Criteria
-
-### Scrum Master
-- Uses Project Board tasks and breaks them down for the team according to Project Methodology standards.
-- Manages the teams using Agile Methodology (leads sprint planning, sprint retrospective and daily-stand up)
-- Reports to teachers.
-
-### Quality Assurance Engineer
-- Enforces coding standards and provides feedback to Pull Requests and Design work.
-- Reviews Pull Requests and raises issues for bugs or unmet standards.
-
-### Developer
-- Understands or seeks out understanding and completes project tasks according to the project requirements
-- Implements QA and peer review feedback
-- Ensures code meets validity, accessibility, SEO, semantic, and responsive, DRY and best practice standards.
-
-### Designer
-- Works with QA on design accuracy, creates a mobile Hi-Fi prototype according to the style guide.
-- Communicates with the client for design approval and makes necessary adjustments.
 
 ## Important Notes
 
