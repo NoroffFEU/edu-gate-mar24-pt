@@ -34,8 +34,8 @@ In your VS Code settings (`.vscode/settings.json`), add:
 
 ## Getting started
 
-    $ Clone the repository by running `git clone https://github.com/NoroffFEU/edu-gate-jan24pt` in your terminal
-    $ Change directory to edu-gate-jan24pt `cd  edu-gate-jan24pt`
+    $ Clone the repository by running `git clone https://github.com/NoroffFEU/edu-gate-mar24-pt` in your terminal
+    $ Change directory to edu-gate-mar24-pt `cd  edu-gate-mar24-pt`
     $ Install the dependencies `npm i`
-    $ Start the server `npm run dev`
+    $ Start the server `npm run start`
     $ Browse to `http://127.0.0.1:8181`

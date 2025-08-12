@@ -1,28 +1,38 @@
-name: Build Tailwind and Deploy to GitHub Pages
+name: Deploy static website to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["develop"] # Change to your default branch if not main
+  workflow_dispatch:    # Allow manual runs
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - name: Build Tailwind and copy HTML
-        run: npm run build
+      - name: Upload site files
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "." # Path to your HTML, CSS, JS files
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        id: deployment
+        uses: actions/deploy-pages@v4
