@@ -26,22 +26,16 @@ const routes = [
 
 function router() {
     let path = location.pathname;
-
-    if (path.endsWith("index.html") || path === "/templates/") {
-        path = "/";
+    try {
+        const url = new URL(window.location.href);
+        path = url.pathname;
+    } catch (e) {
     }
+    if (path.endsWith("index.html") || path === "/templates/") path = "/";
 
-    const potentialMatches = routes.map(route => ({
-        route,
-        isMatch: path === route.path
-    }));
-
-    let match = potentialMatches.find(routeName => routeName.isMatch);
-    if (!match) {
-        match = { route: { path: "/404", view: NotFound }, isMatch: true };
-    }
-    document.querySelector("#app").innerHTML = match.route.view();
-
+    const route = routes.find(r => r.path === path);
+    const view = route ? route.view : NotFound;
+    document.querySelector("#app").innerHTML = view();
 }
 
 function navigateTo(url) {
