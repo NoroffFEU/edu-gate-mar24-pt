@@ -1,11 +1,4 @@
-// views
-import Students from '../pages/students.js'
-
-const Home = () => /*HTML*/`
-<h1>testing home</h1>
-<a href="/students" data-link>testing link</a>
-`;
-
+import routes from "./routes.js";
 
 const NotFound = () => /*HTML*/`
 <div>
@@ -18,10 +11,7 @@ const NotFound = () => /*HTML*/`
     needs a html file to callback?
 */
 
-const routes = [
-  { path: "/", view: Home },
-   { path: "/students", view: Students },
-];
+
 
 
 function router() {
@@ -43,14 +33,28 @@ function navigateTo(url) {
     router();
 }
 
-document.addEventListener("click", e => {
-    const link = e.target.closest('a[data-link]');
-    if (link) {
-        e.preventDefault();
-        navigateTo(link.href);
-    }
-});
+// document.addEventListener("click", e => {
+//     const link = e.target.closest('a[data-link]');
+//     if (link) {
+//         e.preventDefault();
+//         navigateTo(link.href);
+//     }
+// });
 
-document.addEventListener("DOMContentLoaded", router);
-window.addEventListener("popstate", router);
+// document.addEventListener("DOMContentLoaded", router);
+// window.addEventListener("popstate", router);
+export function initRouter() {
+    document.addEventListener("click", e => {
+        const link = e.target.closest('a[data-link]');
+        if (link) {
+            e.preventDefault();
+            navigateTo(link.href);
+        }
+    });
+
+    window.addEventListener("popstate", router);
+    document.addEventListener("DOMContentLoaded", router);
+}
+
+export { navigateTo, router };
 
