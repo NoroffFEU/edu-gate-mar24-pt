@@ -1,9 +1,9 @@
 //Bootstraps the app, loads router
 import { initRouter } from "./router/router.js";
-import Navbar from "./components/navbar.js";
+import Header from "./components/header.js";
 import Footer from "./components/footer.js";
 
-document.getElementById("navbar").innerHTML = Navbar();
+document.getElementById("header").innerHTML = Header();
 document.getElementById("footer").innerHTML = Footer();
 
 initRouter();
