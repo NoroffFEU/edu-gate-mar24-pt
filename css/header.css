@@ -1,0 +1,59 @@
+
+.header-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--padding-32px);
+}
+
+.header-navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* gap: var(--padding-32px); */
+}
+
+.header-navbar a{
+    text-decoration: none;
+    color: var(--color-neutral-dark-gray);
+  
+    width: 180px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+    :visited {
+      color: var(--color-neutral-dark-gray);
+    }
+    
+}
+.header-navbar a {
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+    transition: border-color 0.5s ease, border-width 0.5s ease, font-weight 0.5s ease;
+}
+
+.header-navbar a:hover {
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 700;
+}
+
+.header-navbar a.nav-clicked {
+    border-bottom: 3px solid var(--primary-color);
+    font-weight: 700;
+}
+
+.header-navbar:has(a:hover:not(.nav-clicked)) a.nav-clicked {
+    border-bottom-color: transparent; 
+    font-weight: 500;
+}
+
+.header-navbar a.nav-clicked:hover {
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 700;
+}

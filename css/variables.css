@@ -6,9 +6,9 @@
     --secondary-color: #2196F3; /*Represents trustworthiness and professionalism.*/
     --accent-color: #FF5722;/*Use sparingly for notifications or alerts.*/
 
-    --nc-light-gray: #F5F5F5;/*(background)*/
-    --nc-dark-gray: #333333;/*(text)*/
-    --nc-medium-gray: #757575;/*(secondary text and borders)*/
+    --color-neutral-gray: #F5F5F5;/*(background)*/
+    --color-neutral-dark-gray: #333333;/*(text)*/
+    --color-neutral-medium-gray: #757575;/*(secondary text and borders)*/
 
     /*padding and margin*/
 
@@ -41,7 +41,7 @@
 
 h1, h2, h3, button{
     font-family: var(--primary-font);
-    color: var(--nc-dark-gray);
+    color: var(--color-neutral-dark-gray);
     font-weight: 700;
     line-height: var(--line-height);
 }
@@ -61,8 +61,11 @@ p, label, a{
     font-family: var(--secondary-font);
     font-weight: 500;
 }
-p, a{
+p{
     font-size: var(--paragraph);
+}
+a{
+    font-size: 18px; /*it was 18 in the figma file*/
 }
 label{
     font-size: var(--small-txt);

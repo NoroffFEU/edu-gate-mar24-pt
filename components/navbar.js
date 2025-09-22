@@ -1,11 +1,24 @@
 export default function Navbar() {
   return /*HTML*/ `
-    <nav>
-      <a href="/" data-link>Home</a>
+    <nav class="header-navbar" id="header-navbar">
+      <a href="/" data-link class="nav-clicked">Dashboard</a>
       <a href="/about" data-link>About</a>
-      <a href="/students" data-link>Students</a>
-      <a href="/results" data-link>Results</a>
-      <a href="/school" data-link>School</a>
+      <a href="/" data-link>Contact</a>
+      ${profileBtnInHeader()}
     </nav>
   `;
+}
+
+
+function profileBtnInHeader(){
+     return /*HTML*/`
+     <div>
+      <img 
+               src="./public/icons/user-circle.png" 
+               alt="" 
+               loading="lazy"
+               class="UserLogo">
+    </div>
+      
+     `;
 }
