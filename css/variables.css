@@ -38,3 +38,32 @@
 
 
 }
+
+h1, h2, h3, button{
+    font-family: var(--primary-font);
+    color: var(--nc-dark-gray);
+    font-weight: 700;
+    line-height: var(--line-height);
+}
+h1, h2, h3{
+    letter-spacing: var(--letter-spacing);
+}
+h1{
+    font-size: var(--heading-1);
+}
+h2{
+    font-size: var(--heading-2);
+}
+h3{
+    font-size: var(--heading-3);
+}
+p, label, a{
+    font-family: var(--secondary-font);
+    font-weight: 500;
+}
+p, a{
+    font-size: var(--paragraph);
+}
+label{
+    font-size: var(--small-txt);
+}
