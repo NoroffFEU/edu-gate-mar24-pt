@@ -1,0 +1,23 @@
+html, body { margin: 0; }
+
+.site-footer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  transform: none;
+}
+
+.site-footer picture,
+.site-footer img {
+  display: block;
+  height: auto;
+}
+
+@media (min-width: 1024px){
+  .site-footer{
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
