@@ -26,6 +26,7 @@ function router() {
     const route = routes.find(r => r.path === path);
     const view = route ? route.view : NotFound;
     document.querySelector("#app").innerHTML = view();
+    updateActiveNav();
 }
 
 function navigateTo(url) {
@@ -33,16 +34,19 @@ function navigateTo(url) {
     router();
 }
 
-// document.addEventListener("click", e => {
-//     const link = e.target.closest('a[data-link]');
-//     if (link) {
-//         e.preventDefault();
-//         navigateTo(link.href);
-//     }
-// });
+function updateActiveNav() {
+  const links = document.querySelectorAll('.header-navbar a[data-link]');
+  links.forEach(link => {
+    if (link.getAttribute('href') === location.pathname) {
+      link.classList.add('nav-clicked');
+    } else {
+      link.classList.remove('nav-clicked');
+    }
+  });
+}
 
-// document.addEventListener("DOMContentLoaded", router);
-// window.addEventListener("popstate", router);
+
+
 export function initRouter() {
     document.addEventListener("click", e => {
         const link = e.target.closest('a[data-link]');
