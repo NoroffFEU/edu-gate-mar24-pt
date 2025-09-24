@@ -1,30 +1,28 @@
 export default function LogIn(){
     return /*HTML*/`
-    <div>
-        <h1>Log in</h1>
-
+    <section class="login">
+    
         <form>
-            <div>
+            <h1>Log in</h1>
+            <div class="login-section">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="example@gmail.com" required>
+                <input type="text" id="email" name="email" placeholder="example@gmail.com" required autofocus>
             </div>
 
-             <div>
+             <div class="login-section">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <input type="password" id="password" name="password" placeholder="Enter password" required autofocus>
             </div>
 
             <div>
                 <p>Forgot your password? Click <b>here</b></p>
             </div>
 
-            <div>
-                <button type="submit">Submit</button>
+            <div class="submit-button">
+                <button>Submit</button>
             </div>
         </form>
 
-
-        <a href="/home" data-link>Log In</a>
-    </div>  
+    </section>  
     `;
 }
