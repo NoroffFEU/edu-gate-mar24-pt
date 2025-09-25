@@ -12,16 +12,24 @@ header {
 	border: var(--color-neutral-medium-gray);
 	border-style: inset;
 	border-width: 0.5px;
+	
+	position: sticky;
+	top: 0;
+	z-index: 9; 
+	background: var(--color-neutral-gray);
 }
 
-.HeaderLogo {
-	width: 120px;
-}
+
 
 .UserLogo {
-	width: 60px;
-	height: 60px;
-	justify-items: center;
+	width: 64px;
+	height: 64px;
+	
+	img{
+		width: 64px;
+		height: 64px;
+		object-fit: contain;
+	}
 }
 
 /* /header */
