@@ -1,13 +1,14 @@
 export default function ConfirmationMessage(title, message) {
   return /*HTML*/ `
-    <section>
-        <div>
+    <section class="popUp-container confirmation-popUp">
+      <div class="close-popup">
+        <img src="public/icons/green-x.png" alt="" loading="lazy">
+      </div>
+        <div class="popUp-icon">
             <img src="public/icons/verified.png" alt="" loading="lazy">
         </div>
-        <div>
-            <h2>${title}</h2>
+            <h1>${title}</h1>
             <p>${message}</p>
-        </div>
     </section>
   `;
 }

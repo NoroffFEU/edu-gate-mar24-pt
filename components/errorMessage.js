@@ -1,13 +1,14 @@
 export default function ErrorMessage(title, message) {
   return /*HTML*/ `
-    <section>
-        <div>
+    <section class="popUp-container error-popUp">
+      <div class="close-popup">
+        <img src="public/icons/x-red.png" alt="" loading="lazy">
+      </div>
+        <div class="popUp-icon">
             <img src="public/icons/fail.png" alt="" loading="lazy">
         </div>
-        <div>
-            <h2>${title}</h2>
+            <h1>${title}</h1>
             <p>${message}</p>
-        </div>
     </section>
   `;
 }
