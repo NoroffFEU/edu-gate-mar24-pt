@@ -2,15 +2,19 @@
 
 
 .login{
-    width: 100%;
+    /* width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: '. login message';
+    grid-template-areas: '. login message'; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
    
 }
 
 .login form{
-    grid-area: login;
+    /* grid-area: login; */
     border: 3px solid #CCCCCCCC;
     box-shadow: 0px 4px 4px 0px #00000040 inset;
     display: flex;
@@ -69,22 +73,22 @@
 }
 
 @media (max-width: 1300px){
-    .login{
+    /* .login{
     grid-template-rows: auto;
     grid-template-areas: 'message message message'
                         '. login .';
     
-    }
+    } */
 
 }
 
 @media (max-width: 768px){
-    .login{
+    /* .login{
     grid-template-columns: 1fr;
     grid-template-areas: 'message'
                         'login';
     
-    }
+    } */
     .login form{
     border: none;
     box-shadow: none;

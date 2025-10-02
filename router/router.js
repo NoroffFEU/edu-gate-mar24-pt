@@ -6,10 +6,6 @@ const NotFound = () => /*HTML*/`
     <a href="/" data-link>Home</a>
 </div>
 `;
-/*
-    error when refreshing student page. 
-    needs a html file to callback?
-*/
 
 
 

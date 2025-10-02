@@ -1,13 +1,15 @@
 /*move #app later*/
-/* #app{
+ #app{
     position: relative;
-} */
+} 
 
 .popUp-container{
-    grid-area: message;
-    justify-self: end;
-    position: relative;
-    max-width: 450px;
+    /* grid-area: message;
+    justify-self: end; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
     height: 167px;
 
     gap: 10px;
@@ -74,7 +76,8 @@
     }
 
     .popUp-container{
-        max-width: 337px;
+        position: relative;
+        width: 337px;
         height: 114px;
         gap: 0 10px;
         grid-template-columns: auto 1fr;
@@ -88,5 +91,12 @@
     }
     .popUp-container p{
         font-size: var(--small-txt);
+    }
+}
+
+@media (max-width: 380px){
+     .popUp-container{
+        width: 100%;
+                  
     }
 }
