@@ -1,12 +1,14 @@
 /*move #app later*/
-#app{
+/* #app{
     position: relative;
-}
+} */
 
 .popUp-container{
+    grid-area: message;
+    justify-self: end;
     position: relative;
-    width: 450px;
-    height: 167;
+    max-width: 450px;
+    height: 167px;
 
     gap: 10px;
     padding: var(--padding-24px) var(--padding-16px);
@@ -72,7 +74,7 @@
     }
 
     .popUp-container{
-        width: 337px;
+        max-width: 337px;
         height: 114px;
         gap: 0 10px;
         grid-template-columns: auto 1fr;

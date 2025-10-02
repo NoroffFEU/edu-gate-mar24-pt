@@ -1,6 +1,7 @@
 import PopUpMessage from "../components/popupMessageHandeling.js";
 
 export default function LogIn(){
+    let printMessage = false;
     return /*HTML*/`
     <section class="login">
         ${PopUpMessage(true, "Success!", "Please check your email for instructions on how to verify your account.")}
