@@ -1,7 +1,9 @@
 import PopUpMessage from "../components/popupMessageHandeling.js";
 import { navigateTo } from "../router/router.js";
+import { SaveLogInToLocalStorage } from "../dataHandeling/localStorageHandeling.js";
 window.passwordResetMessage = passwordResetMessage;
 window.wrongLoginMessage = wrongLoginMessage;
+window.SaveLogInToLocalStorage = SaveLogInToLocalStorage;
 export default function LogIn(){
     return /*HTML*/`
     <section class="login">
@@ -11,7 +13,7 @@ export default function LogIn(){
             <h1>Log in</h1>
             <div class="login-section">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="example@gmail.com" required autofocus>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required autofocus>
             </div>
 
              <div class="login-section">
@@ -43,5 +45,6 @@ function wrongLoginMessage(event){
         document.getElementById('message').innerHTML = PopUpMessage(false, "Failed Log In!", "Wrong password or email address!");
         return;
     }
+    SaveLogInToLocalStorage(email, password);
     navigateTo("/");
 }
