@@ -18,6 +18,7 @@
 .student-dashboard h1,
 .student-dashboard h2, 
 .student-dashboard h3{
+    text-align: center;
     margin: 0;
 }
 
@@ -41,6 +42,10 @@
     text-decoration: none;
     text-align: center;
     font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .student-dashboard-buttons a div{
@@ -53,4 +58,41 @@
     width: 150px;
     border: 1px solid black;
     border-radius: 50%;
+}
+
+@media (max-width: 550px){
+
+    .student-dashboard{
+        gap: 1rem;
+    }
+    .student-dashboard-information{
+        gap: 1rem;
+    }
+    .student-dashboard-buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        width: 100%;
+    }
+    .student-dashboard-buttons a div{
+        max-width: 60px;
+        max-height: 60px;
+    }
+    .student-dashboard-buttons a p{
+        font-size: 14px;
+    }
+
+    .student-dashboard h3{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .student-dashboard h2{
+        font-size: 20px;
+    }
+    .student-profile-logo{
+        max-height: 71px;
+        max-width: 71px;
+    }
 }
