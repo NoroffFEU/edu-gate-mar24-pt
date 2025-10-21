@@ -11,23 +11,26 @@ export default function Students(){
         </div>
 
         <section class="student-dashboard-buttons">
-            <a href="/" data-link>
+            <a href="/" data-link class="tooltip">
                 <div>
                     <img src="public/icons/user-circle.png" alt="" loading="lazy"/>
                 </div>
                 <p>See profile</p>
+                <span class="tooltip-text">View your profile</span>
             </a>
-            <a href="/" data-link>
+            <a href="/" data-link  class="tooltip">
                 <div>
                     <img src="public/icons/results.png" alt="" loading="lazy"/>
                 </div>
                 <p>My results</p>
+                <span class="tooltip-text">View your results</span>
             </a>
-            <a href="/" data-link>
+            <a href="/" data-link  class="tooltip">
                 <div>
                     <img src="public/icons/logout.png" alt="" loading="lazy"/>
                 </div>
                 <p>Log out</p>
+                <span class="tooltip-text">Log out of your account</span>
             </a>
         </section>
     </div>  

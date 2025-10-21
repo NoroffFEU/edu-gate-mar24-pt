@@ -46,7 +46,39 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+.student-dashboard-buttons a * {
+    pointer-events: none; 
+}
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    background-color: rgb(252, 252, 252);
+    border: 1px solid rgb(173, 173, 173);
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 1rem;
+    padding: 8px 10px;
+    position: absolute;
+    z-index: 10;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 .student-dashboard-buttons a div{
     width: 96px;
