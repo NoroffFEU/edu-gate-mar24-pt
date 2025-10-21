@@ -1,6 +1,7 @@
 /*move #app later*/
  #app{
     position: relative;
+    overflow: hidden;
 } 
 
 .popUp-container{
@@ -8,7 +9,7 @@
     justify-self: end; */
     position: absolute;
     top: 0;
-    right: 0;
+    right: -500px;
     width: 450px;
     height: 167px;
 
@@ -23,6 +24,15 @@
                         'logo message';
     justify-items: start;
     align-items: center;
+
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.popUp-container.show {
+    right: 0;
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .popUp-container h1{

@@ -22,7 +22,7 @@ export default function LogIn(){
             </div>
 
             <div>
-                <p>Forgot your password? Click <b onclick="passwordResetMessage()">here</b></p>
+                <p>Forgot your password? <span onclick="passwordResetMessage()">Click <b>here</b></span></p>
             </div>
 
             <div class="submit-button">
@@ -35,14 +35,15 @@ export default function LogIn(){
 }
 
 function passwordResetMessage(){
-    document.getElementById('message').innerHTML = PopUpMessage(true, "Success!", "Please check your email for instructions on how to verify your account.");
+    PopUpMessage(true, "Success!", "Please check your email for instructions on how to verify your account.");
 }
+
 function wrongLoginMessage(event){
     if (event) event.preventDefault();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
     if(!email.includes("@") || password === ""){
-        document.getElementById('message').innerHTML = PopUpMessage(false, "Failed Log In!", "Wrong password or email address!");
+        PopUpMessage(false, "Failed Log In!", "Wrong password or email address!");
         return;
     }
     SaveLogInToLocalStorage(email, password);
