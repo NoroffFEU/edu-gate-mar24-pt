@@ -1,4 +1,5 @@
 import routes from "./routes.js";
+import { GetEmailFromLocalStorage } from "../dataHandeling/localStorageHandeling.js";
 
 const NotFound = () => /*HTML*/`
 <div>
@@ -18,6 +19,16 @@ function router() {
     } catch (e) {
     }
     if (path.endsWith("index.html") || path === "/templates/") path = "/";
+
+    const isLoggedIn = !!GetEmailFromLocalStorage();
+    if (!isLoggedIn && path !== "/login") {
+        navigateTo("/login");
+        return;
+    }
+    if (isLoggedIn && path === "/login") {
+        navigateTo("/");
+        return;
+    }
 
     const route = routes.find(r => r.path === path);
     const view = route ? route.view : NotFound;
