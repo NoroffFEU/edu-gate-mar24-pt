@@ -1,3 +1,5 @@
+import LogoutButton from "./logOutButton.js";
+
 export default function Navbar() {
   return /*HTML*/ `
     <nav class="header-navbar" id="header-navbar">
@@ -53,12 +55,14 @@ function navigationOptions(){
             <img src="./public/icons/user-circle.png" alt="">
           </span>
         </a>
+        ${LogoutButton()}
     `;
   }else{
     return /*HTML*/ `
         <a href="/" data-link>Dashboard</a>
         <a href="/about" data-link>About</a>
         <a href="/contact" data-link>Contact</a>
+        ${LogoutButton()}
         ${profileBtnInHeader()}
       
     `;
